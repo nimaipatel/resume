@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+
+\hypersetup{breaklinks=true,%
+pagecolor=white,
+colorlinks=true,%
+linkcolor=cyan,%
+urlcolor=MyDarkBlue}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
+\definecolor{MyPurple}{rgb}{0.5,0,0.5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting parameters  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength{\tabin}
+\setlength{\tabin}{1em}
+\newlength{\secsep}
+\setlength{\secsep}{0.1cm}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\definecolor{contactgray}{gray}{0.3}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template Definitions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
+\newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
+\newcommand{\program}[1]{\begin{center}\textsc{#1}\end{center}}
+\newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
+
+\newenvironment{tabbedsection}[1]{
+  \begin{list}{}{
+      \setlength{\itemsep}{0pt}
+      \setlength{\labelsep}{0pt}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\leftmargin}{\tabin}
+      \setlength{\rightmargin}{\tabin}
+      \setlength{\listparindent}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\partopsep}{0pt}
+      \setlength{\topsep}{#1}
+    }
+  \item[]
+}{\end{list}}
+
+\newenvironment{nospacetabbing}{
+    \begin{tabbing}
+}{\end{tabbing}\vspace{-1.2em}}
+
+\newenvironment{resume_header}{\color{MyPurple}}{\vspace{0pt}}
+
+
+\newenvironment{resume_section}[1]{
+  \filbreak
+  \vspace{2\secsep}
+  \textsc{\large#1}
+  \lineunder
+  \begin{tabbedsection}{\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{resume_subsection}[2][]{
+  \textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
+  \begin{tabbedsection}{0.5\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
+
+\newenvironment{resume_employer}[4]{
+  \vspace{\secsep}
+  \textbf{#1} \\ 
+  \indent {\small #2} \hfill {\footnotesize#3 (#4)}
+  \begin{tabbedsection}{0pt}
+  \begin{subitems}
+}{\end{subitems}\end{tabbedsection}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{resume_header}
+\name{nimai}
+    \contact{nimai.m.patel@gmail.com \hspace{2cm} (+91) 9324658233 } 
+\end{resume_header}
+
+%\begin{resume_section}{About Me}
+%  \begin{nospacetabbing}
+%
+%  \end{nospacetabbing}
+
+%\end{resume_section}
+
+\begin{resume_section}{Skills}
+    \begin{resume_subsection}{Programming Languages}
+        \begin{subitems}
+            \item JavaScript, C, C++, TypeScript, Python
+            \item Currently learning: Golang, Java, SQL, 
+        \end{subitems}
+    \end{resume_subsection}
+
+    \begin{resume_subsection}{Front-end web frameworks}
+        \begin{subitems}
+        \item React -- Next.js \& CRA, Tailwindcss
+        \item Currently learning: Svelte and Sapper
+        \end{subitems}
+    \end{resume_subsection}
+
+    \begin{resume_subsection}{Back-end web technologies}
+        \begin{subitems}
+        \item Node.js, MongoDB, WebSockets, RESTFful APIs with Express.js, Django \& DRF
+        \end{subitems}
+    \end{resume_subsection}
+
+    \begin{resume_subsection}{Tools}
+        \begin{subitems}
+        \item Git, Unix shell scripting, Vim, tmux, {\LaTeX} 
+        \end{subitems}
+    \end{resume_subsection}
+
+\end{resume_section}
+
+
+\begin{resume_section}{Projects}
+    \begin{resume_subsection}{StackReview -- A peer code review portal}
+        \begin{subitems}
+            \item This was my team's submission to auth0's online hackathon, built using Next.js and MongoDB
+            \item The authentication for the login system was implemented using auth0, for the backend Next.js' inbuilt API routing was used
+            \item Repos can be found here: \href{https://github.com/stack-review}{https://github.com/stack-review}
+            \item The site is running at: \href{https://stackreview.vercel.app/}{https://stackreview.vercel.app/}
+        \end{subitems}
+    \end{resume_subsection}
+    I have some other dummy projects that I haven't deployed as they were built only for practicing using other technologies. These can be found on my GitHub account.
+\end{resume_section}
+
+
+\begin{resume_section}{Education}
+    \begin{resume_subsection}[2019 - 2023 (expected)]{D.J. Sanghvi College of Engineering}
+    \begin{subitems}
+      \item B.Tech IT Engineering
+      \item Average CGPA over 2 semesters: 9.71
+    \end{subitems}
+  \end{resume_subsection}
+\end{resume_section}
+
+\vspace{1cm}
+%GitHub: \href{https://github.com/nimainimaii}{nimainimaii} \hspace{2cm} 
+%LinkedIn: \href{https://www.linkedin.com/in/nimai-patel-88a645158/}{https://www.linkedin.com/in/nimai-patel-88a645158/}
+
+\end{document}
+
