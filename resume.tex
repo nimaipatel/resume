@@ -13,7 +13,7 @@ urlcolor=MyDarkBlue}
 \definecolor{MyPurple}{rgb}{0.5,0,0.5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-% Formatting parameters  %
+% Formatting parameters	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newlength{\tabin}
@@ -31,7 +31,7 @@ urlcolor=MyDarkBlue}
 \pagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Template Definitions  %
+%	Template Definitions	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
@@ -40,163 +40,158 @@ urlcolor=MyDarkBlue}
 \newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
 
 \newenvironment{tabbedsection}[1]{
-  \begin{list}{}{
-      \setlength{\itemsep}{0pt}
-      \setlength{\labelsep}{0pt}
-      \setlength{\labelwidth}{0pt}
-      \setlength{\leftmargin}{\tabin}
-      \setlength{\rightmargin}{\tabin}
-      \setlength{\listparindent}{0pt}
-      \setlength{\parsep}{0pt}
-      \setlength{\parskip}{0pt}
-      \setlength{\partopsep}{0pt}
-      \setlength{\topsep}{#1}
-    }
-  \item[]
+	\begin{list}{}{
+		\setlength{\itemsep}{0pt}
+		\setlength{\labelsep}{0pt}
+		\setlength{\labelwidth}{0pt}
+		\setlength{\leftmargin}{\tabin}
+		\setlength{\rightmargin}{\tabin}
+		\setlength{\listparindent}{0pt}
+		\setlength{\parsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\partopsep}{0pt}
+		\setlength{\topsep}{#1}
+	}
+	\item[]
 }{\end{list}}
 
 \newenvironment{nospacetabbing}{
-    \begin{tabbing}
+	\begin{tabbing}
 }{\end{tabbing}\vspace{-1.2em}}
 
 \newenvironment{resume_header}{\color{MyPurple}}{\vspace{0pt}}
 
 
 \newenvironment{resume_section}[1]{
-  \filbreak
-  \vspace{2\secsep}
-  \textsc{\large#1}
-  \lineunder
-  \begin{tabbedsection}{\secsep}
+	\filbreak
+	\vspace{2\secsep}
+	\textsc{\large#1}
+	\lineunder
+	\begin{tabbedsection}{\secsep}
 }{\end{tabbedsection}}
 
 \newenvironment{resume_subsection}[2][]{
-  \textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
-  \begin{tabbedsection}{0.5\secsep}
+	\textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
+	\begin{tabbedsection}{0.5\secsep}
 }{\end{tabbedsection}}
 
 \newenvironment{subitems}{
-  \renewcommand{\labelitemi}{-}
-  \begin{itemize}
-      \setlength{\labelsep}{1em}
+	\renewcommand{\labelitemi}{-}
+	\begin{itemize}
+		\setlength{\labelsep}{1em}
 }{\end{itemize}}
 
 \newenvironment{resume_employer}[4]{
-  \vspace{\secsep}
-  \textbf{#1} \\ 
-  \indent {\small #2} \hfill {\footnotesize#3 (#4)}
-  \begin{tabbedsection}{0pt}
-  \begin{subitems}
+	\vspace{\secsep}
+	\textbf{#1} \\ 
+	\indent {\small #2} \hfill {\footnotesize#3 (#4)}
+	\begin{tabbedsection}{0pt}
+	\begin{subitems}
 }{\end{subitems}\end{tabbedsection}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Start Document     %
+%	 Start Document	 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \begin{resume_header}
 \name{Nimai Patel}
-    \contact{nimaipatel@tutanota.com}
+	\contact{nimaipatel@tutanota.com}
 \end{resume_header}
 
-%\begin{resume_section}{About Me}
-%  \begin{nospacetabbing}
-%
-%  \end{nospacetabbing}
-
-%\end{resume_section}
-
 \begin{resume_section}{Skills}
-    \begin{resume_subsection}{Programming Languages}
-        \begin{subitems}
-            \item C, C++, JavaScript, TypeScript, Lua, Haskell, Java, Python
 
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{Programming Languages}
+		\begin{subitems}
+			\item C, C++, JavaScript, TypeScript, Lua, Haskell, Java, Python
+		\end{subitems}
+	\end{resume_subsection}
 
-    \begin{resume_subsection}{Tools}
-        \begin{subitems}
-        \item Git, UNIX and Linux shell scripting, Vim, tmux, {\LaTeX}
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{Tools}
+		\begin{subitems}
+		\item Git, UNIX and Linux shell scripting, Vim, tmux, {\LaTeX}
+		\end{subitems}
+	\end{resume_subsection}
 
-    \begin{resume_subsection}{Front-end web frameworks}
-        \begin{subitems}
-        \item React -- Next.js \& CRA, Tailwindcss
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{Front-end web frameworks}
+		\begin{subitems}
+		\item React -- Next.js \& CRA, Tailwindcss
+		\end{subitems}
+	\end{resume_subsection}
 
-    \begin{resume_subsection}{Back-end web technologies}
-        \begin{subitems}
-        \item Node.js, MongoDB, PostgreSQL, WebSockets, RESTFful APIs with Express.js
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{Back-end web technologies}
+		\begin{subitems}
+		\item Node.js, MongoDB, PostgreSQL, WebSockets, RESTFful APIs with Express.js
+		\end{subitems}
+	\end{resume_subsection}
 
 \end{resume_section}
 
 
 \begin{resume_section}{Projects}
 
-    \begin{resume_subsection}{StackReview -- A peer code review portal}
-        \begin{subitems}
-            \item This was my team's submission to auth0's online hackathon, built using Next.js and MongoDB
-            \item The authentication for the login system was implemented using auth0, for the backend Next.js' inbuilt API routing was used
-            \item Repos can be found here: \href{https://github.com/stack-review}{https://github.com/stack-review}
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{StackReview -- A peer code review portal}
+		\begin{subitems}
+			\item This was my team's submission to auth0's online hackathon, built using Next.js and MongoDB
+			\item The authentication for the login system was implemented using auth0, for the backend Next.js' inbuilt API routing was used
+			\item Repos can be found here: \href{https://github.com/stack-review}{https://github.com/stack-review}
+		\end{subitems}
+	\end{resume_subsection}
 
-    \begin{resume_subsection}{Official Website of College's CSI Student Chapter}
-        \begin{subitems}
-            \item This is a static site generated using React based components
-            \item The site is running at: \href{https://djcsi.co.in}{https://djcsi.co.in}
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}{Official Website of College's CSI Student Chapter}
+		\begin{subitems}
+			\item This is a static site generated using React based components
+			\item The site is running at: \href{https://djcsi.co.in}{https://djcsi.co.in}
+		\end{subitems}
+	\end{resume_subsection}
 
 	\begin{resume_subsection}{FindIt -- A Lost {\&} Found Management tool}
-        \begin{subitems}
-            \item This was my team's submission to DJCSI's online hackathon
-	    \item The app had a web front-end for the lost {\&} found admin and a mobile front-end for the users
-            \item Project repository: \href{https://github.com/nimaipatel/findit}{https://github.com/nimaipatel/findit}
-        \end{subitems}
-    \end{resume_subsection}
+		\begin{subitems}
+			\item This was my team's submission to DJCSI's online hackathon
+		\item The app had a web front-end for the lost {\&} found admin and a mobile front-end for the users
+			\item Project repository: \href{https://github.com/nimaipatel/findit}{https://github.com/nimaipatel/findit}
+		\end{subitems}
+	\end{resume_subsection}
 
 \end{resume_section}
 
 \begin{resume_section}{Experience}
-    \begin{resume_subsection}{Maintaining Literature Society's CMS Based Website}
-        \begin{subitems}
-            \item This is a platform for writers of the college's literature society -- DJLIT
-            \item The website is hosted on a VPS and uses Ghost, which is a Nodejs based headless CMS
-            \item The site is running at: \href{https://djvu.in}{https://djvu.in}
-        \end{subitems}
-    \end{resume_subsection}
+
+	\begin{resume_subsection}{Maintaining Literature Society's CMS Based Website}
+		\begin{subitems}
+			\item This is a platform for writers of the college's literature society -- DJLIT
+			\item The website is hosted on a VPS and uses Ghost, which is a Nodejs based headless CMS
+			\item The site is running at: \href{https://djvu.in}{https://djvu.in}
+		\end{subitems}
+	\end{resume_subsection}
+
 \end{resume_section}
 
 \begin{resume_section}{Education}
 
-    \begin{resume_subsection}[2019 - 2023 (expected)]{D.J. Sanghvi College of Engineering}
-        \begin{subitems}
-            \item B.Tech IT Engineering
-            \item Average CGPA over 4 semesters: 9.43
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}[2019 - 2023 (expected)]{D.J. Sanghvi College of Engineering}
+		\begin{subitems}
+			\item B.Tech IT Engineering
+			\item Average CGPA over 4 semesters: 9.43
+		\end{subitems}
+	\end{resume_subsection}
 
 
-    \begin{resume_subsection}[2017 - 2019]{Pace Junior Science College}
-        \begin{subitems}
-            \item HSC Science
-	    \item 76.15{\%}
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}[2017 - 2019]{Pace Junior Science College}
+		\begin{subitems}
+			\item HSC Science
+		\item 76.15{\%}
+		\end{subitems}
+	\end{resume_subsection}
 
-    \begin{resume_subsection}[2017]{D. G. Khetan International School}
-        \begin{subitems}
-            \item IGCSE with 7 subjects
-	    \item A* (93.29{\%})
-        \end{subitems}
-    \end{resume_subsection}
+	\begin{resume_subsection}[2017]{D. G. Khetan International School}
+		\begin{subitems}
+			\item IGCSE with 7 subjects
+		\item A* (93.29{\%})
+		\end{subitems}
+	\end{resume_subsection}
 
 \end{resume_section}
 
