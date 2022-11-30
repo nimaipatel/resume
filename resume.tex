@@ -17,7 +17,7 @@ urlcolor=MyDarkBlue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newlength{\tabin}
-\setlength{\tabin}{1em}
+\setlength{\tabin}{0em}
 \newlength{\secsep}
 \setlength{\secsep}{0.1cm}
 
@@ -99,27 +99,59 @@ urlcolor=MyDarkBlue}
 \begin{resume_header}
 \name{Nimai Patel}
 	\contact{Email: nimai.m.patel@gmail.com
-	\hspace{1cm}Website: \href{https://nimaipatel.me}{nimaipatel.me}
+	\hspace{1cm}Website: \href{https://nimaipatel.github.io}{nimaipatel.github.io}
 	\hspace{1cm}GitHub: \href{https://github.com/nimaipatel}{nimaipatel} }
 \end{resume_header}
+
+\begin{resume_section}{Education}
+
+	\begin{resume_subsection}[2019 - 2023 (expected)]{D.J. Sanghvi College of Engineering}
+		\begin{subitems}
+			\item B.Tech IT Engineering with average CGPA of 9.37/10 over 6 semesters
+		\end{subitems}
+	\end{resume_subsection}
+
+
+	\begin{resume_subsection}[2017 - 2019]{Pace Junior Science College}
+		\begin{subitems}
+			\item HSC Science with 76.15{\%} score
+		\end{subitems}
+	\end{resume_subsection}
+
+	\begin{resume_subsection}[2017]{D. G. Khetan International School}
+		\begin{subitems}
+		\item 7 IGCSE subjects with overall A* grade (93.29{\%})
+		\end{subitems}
+	\end{resume_subsection}
+
+\end{resume_section}
 
 \begin{resume_section}{Skills}
 
 	\begin{resume_subsection}{Programming Languages}
 		\begin{subitems}
-			\item C, C++, Bash and POSIX compilant shell script, Python, JavaScript, Haskell, Lua
+		\item C, C++, UNIX shell script, Python, JavaScript, Haskell, Lua, {\LaTeX}, Solidity
 		\end{subitems}
 	\end{resume_subsection}
 
 	\begin{resume_subsection}{Tools}
 		\begin{subitems}
-		\item Git, UNIX and GNU core utilities, Vim, {\LaTeX}
+		\item Git, Linux, UNIX and GNU core utilities, Vim, gdb, Hadoop
 		\end{subitems}
 	\end{resume_subsection}
 
-	\begin{resume_subsection}{Web Development Stacks}
+	\begin{resume_subsection}{Web and Mobile Development}
 		\begin{subitems}
-		\item React, Node.js, MongoDB, PostgreSQL, WebSockets, RESTFful APIs
+		\item JavaScript, React, Node.js
+		\item Flutter and Dart
+		\item MongoDB, PostgreSQL, Web Sockets, RESTFful APIs
+		\end{subitems}
+	\end{resume_subsection}
+
+	\begin{resume_subsection}{Blockchain Development}
+		\begin{subitems}
+		\item Ganache and Truffle suite
+		\item Ethereum Development using Solidity
 		\end{subitems}
 	\end{resume_subsection}
 
@@ -127,49 +159,69 @@ urlcolor=MyDarkBlue}
 
 \begin{resume_section}{Experience}
 
-	\begin{resume_subsection}{Embedded Systems Intern at Meshnet}
+	\begin{resume_subsection}[Since March 2022]{Embedded Systems Engineer at Meshnet Electronics}
 		\begin{subitems}
-			\item I implemented over-the-air updates, NTP time sync
-				and various other features on the ESP-IDF
-				platform
+			\item   Implemented over-the-air updates, NTP time
+				syncing, remote configuration, serial
+				configuration
+			\item   Designed all components with minimal coupling
+				so that they could be put into any project with
+				little effort
+			\item   Conducted testing efforts which included range
+				testing, sensor calibration and OTA reliability
+				testing
 		\end{subitems}
 	\end{resume_subsection}
 
-	\begin{resume_subsection}{Technical Head of CSI}
+	\begin{resume_subsection}[August 2021 - Septermbet 2021]{BAS and SOC developer at Tata Advanced Systems Limited}
 		\begin{subitems}
-			\item I mentored a team of 5 sophomores in various
-				projects that we take up for the college's CSI
-				chapter
-			\item I also maintain the various websites and server
-				side software that CSI builds
+		\item For my Senior year capstone project, I am developing a
+			breach attack simulation software and security
+			operations center for Tata Advanced Systems Limited
+		\item We are currently drafting a review paper about existing
+			BAS systems and will be submitting it to 9th Somaiya
+			International Conference on Technology and Information
+			Management
 		\end{subitems}
 	\end{resume_subsection}
 
-	\begin{resume_subsection}{Contributing to and Maintaining FOSS projects}
-		\begin{subitems}
-		\item I contribute to and maintain some miscellaneous free
-			and open source software projects which can be found on
-			my \href{https://github.com/nimaipatel}{Github page}
-		\item I also have experience in package deployment and
-			management for Arch Linux. I maintain the package for
-			brn which is a program I have written and maintain:
-			\href{https://aur.archlinux.org/packages/brn-git}{https://aur.archlinux.org/packages/brn-git}
-		\end{subitems}
-	\end{resume_subsection}
-
-	\begin{resume_subsection}{Intern as SOC Analyst at RNS Technology}
+	\begin{resume_subsection}[August 2021 - September 2021]{SOC Analyst Intern at RNS Technology}
 		\begin{subitems}
 		\item This is my sophomore year summer internship at RNS Technology
 			which is a cyber security firm
-		\item I learnt about system and organization control operations and
+		\item Learnt about system and organization control operations and
 			how these repetitive tasks can be automated
+		\end{subitems}
+	\end{resume_subsection}
+
+\end{resume_section}
+
+\begin{resume_section}{Extra Curricular Activities}
+
+	\begin{resume_subsection}[December 2020 - August 2022]{Technical Head of Computer Society of India at College}
+		\begin{subitems}
+			\item Mentored a team of 5 sophomores in various
+				projects that we take up for the college's CSI
+				chapter
+			\item Maintained and developed the various websites and server
+				side software that CSI uses
+		\end{subitems}
+	\end{resume_subsection}
+
+	\begin{resume_subsection}{Instructor at Competitive Programming Club}
+		\begin{subitems}
+			\item   Organized and conducted lectures for freshmen students
+			\item   Covered basics of C progamming and taught
+				concepts like for-loops, if-else statements,
+				arrays, and introduced begineer competitive
+				programming problems
 		\end{subitems}
 	\end{resume_subsection}
 
 	\begin{resume_subsection}{Maintaining Literature Society's Web Site}
 		\begin{subitems}
-			\item I maintained the literature society's
-				CMS based website in the past
+			\item   Maintained the literature society's
+				CMS based website hosted on a Linux server
 		\end{subitems}
 	\end{resume_subsection}
 
@@ -177,7 +229,7 @@ urlcolor=MyDarkBlue}
 
 \begin{resume_section}{Projects}
 
-	\begin{resume_subsection}{Rideshare - a decentralized ride-hailing}
+	\begin{resume_subsection}{Rideshare - a decentralized ride-hailing system}
 		\begin{subitems}
 			\item Rideshare is a decentralized ride-hailing system
 				that runs on Mobile devices
@@ -188,6 +240,8 @@ urlcolor=MyDarkBlue}
 			\item The primary aim of reducing middle-men involvement
 				is to be able to tame the dramatically varying
 				surge prices of centralized systems like Uber
+			\item Authored a paper on the same and submitted to 4th IEEE Bombay Section Signature Conference. 
+				The paper is accepted for oral presentation and will be published in IEEE Xplore.
 			\item Repository link:
 				\href{https://github.com/nimaipatel/ipd}{https://github.com/nimaipatel/ipd}
 		\end{subitems}
@@ -197,6 +251,10 @@ urlcolor=MyDarkBlue}
 		\begin{subitems}
 			\item This is a text editor based bulk rename utility
 				written in C for GNU/Linux
+			\item It list all the file names in a text buffer in your
+				default text editor, from where they can be easily
+				bulk renamed using advanced editing
+				capabilities
 			\item Compared to similar programs written in scripting
 				languages, brn can handle edge cases like
 				swapped names atomically -- without creating
@@ -208,7 +266,8 @@ urlcolor=MyDarkBlue}
 
 	\begin{resume_subsection}{dwm, st and dmenu}
 		\begin{subitems}
-			\item These are my forks of C-based X11 window managers and terminal emulators patched with extra features
+			\item These are my forks of C-based X11 window managers and terminal emulators
+			\item These are patched with features such as on-the-fly configuration changes using UNIX signals
 			\item Repository link: \href{https://github.com/nimaipatel/st}{https://github.com/nimaipatel/st}
 		\end{subitems}
 	\end{resume_subsection}
@@ -226,46 +285,6 @@ urlcolor=MyDarkBlue}
 				railway concession from the college and
 				generating leaving certificates
 			\item Web client made using React and Firebase real-time database
-		\end{subitems}
-	\end{resume_subsection}
-
-	\begin{resume_subsection}{FindIt -- A Lost {\&} Found Management tool}
-		\begin{subitems}
-			\item This was my team's submission to CSI's hackathon
-			\item Project repository: \href{https://github.com/nimaipatel/findit}{https://github.com/nimaipatel/findit}
-		\end{subitems}
-	\end{resume_subsection}
-
-	\begin{resume_subsection}{StackReview -- A code review website}
-		\begin{subitems}
-			\item This was my team's submission to OAuth's 2020 Hackathon
-			\item Project repository: \href{https://github.com/stackreview}{https://github.com/stackreview}
-		\end{subitems}
-	\end{resume_subsection}
-
-\end{resume_section}
-
-\begin{resume_section}{Education}
-
-	\begin{resume_subsection}[2019 - 2023 (expected)]{D.J. Sanghvi College of Engineering}
-		\begin{subitems}
-			\item B.Tech IT Engineering
-			\item Average CGPA over 5 semesters: 9.42
-		\end{subitems}
-	\end{resume_subsection}
-
-
-	\begin{resume_subsection}[2017 - 2019]{Pace Junior Science College}
-		\begin{subitems}
-			\item HSC Science
-		\item 76.15{\%}
-		\end{subitems}
-	\end{resume_subsection}
-
-	\begin{resume_subsection}[2017]{D. G. Khetan International School}
-		\begin{subitems}
-			\item IGCSE with 7 subjects
-		\item A* (93.29{\%})
 		\end{subitems}
 	\end{resume_subsection}
 
